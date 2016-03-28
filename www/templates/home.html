@@ -1,0 +1,23 @@
+<ion-view title="LandPks Color Application">
+    <ion-content>
+        <p>Example of Ionic tabs. Navigate to each tab, and
+        navigate to child views of each tab and notice how
+        each tab has its own navigation history.</p>
+        <p>
+        <button class="button button-block button-energized" ng-click="takePhoto()">
+            Take Photo
+        </button><br><br>
+        <button class="button button-block button-energized" ng-click="addImage()">
+            Add Existing Photo
+        </button><br><br>
+        <div>
+            <ion-scroll direction="x" scrollbar-x="true" style="height:200px; min-height: 200px; overflow: scroll; white-space: nowrap;">
+                <img id="image" ng-repeat="image in images" ng-src="{{urlForImage(image)}}" ng-click="sampleActionSheet(image)" style="height:200px; padding: 5px 5px 5px 5px;"/>
+            </ion-scroll>
+        </div>
+        
+        <canvas id="canvas" width="100px" height="100px"></canvas>
+        <canvas id="canvas2" width="100px" height="100px"></canvas>
+        </p>
+    </ion-content>
+</ion-view>
